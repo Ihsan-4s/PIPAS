@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body class="align-items-center justify-content-center" style="background-image: url(/img/Monte\ Bromo\,\ Java\ \(1\).jpg);background-repeat: no-repeat;background-size: cover; background-position: center;"></body>
+<div class="text-center" style="margin-top: 50px;">
+    <img class="animate__animated animate__fadeIn" src="/img/Screenshot_2025-05-03_222818-removebg-preview.png" alt="">
+</div>
+    <div class="container d-flex" style="height: 620px;">
+        <div class="row shadow rounded overflow-hidden" style="width: 900px; max-width: 900px; margin-bottom: auto; margin-left: auto; margin-right: auto; margin-top: 60px;">
+            <div class="col-md-6 text-white d-flex flex-column justify-content-center align-items-center" style="background: linear-gradient(135deg,  #477fcd, #92fe9d);">
+                <h3 class="mb-3 animate__animated animate__fadeIn">already have an account?</h3>
+                <p class="text-center animate__animated animate__fadeIn">Login and discover a great amount of new opportunities!</p>
+                <a href="index.html" class="btn btn-light mt-3 animate__animated animate__fadeIn">Login</a>
+            </div>
+            <div class="col-md-6 bg-white p-5">
+                <h2 class="animate__animated animate__fadeIn">Register</h2>
+                <form id="registerForm">
+                    <input class="form-control mb-3 animate__animated animate__fadeIn" type="text" id="name" placeholder="Nama Lengkap">
+                    <input class="form-control mb-3 animate__animated animate__fadeIn" type="email" id="email" placeholder="Email">
+                    <input class="form-control mb-3 animate__animated animate__fadeIn" type="password" id="password" placeholder="Password">
+                    <button class="btn btn-success w-100 animate__animated animate__bounceIn" type="submit">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            const user = { name, email, password };
+            localStorage.setItem('user', JSON.stringify(user));
+
+            if (name && email && password) {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Registration Successful',
+                    text: 'You can now log in!',
+                    confirmButtonText: 'OK'
+                }).then(() => {
+                    window.location.href = 'index.html';
+                });
+            } else {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Please fill in all fields!'
+                });
+            }
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js" integrity="sha384-VQqxDN0EQCkWoxt/0vsQvZswzTHUVOImccYmSyhJTp7kGtPed0Qcx8rK9h9YEgx+" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
