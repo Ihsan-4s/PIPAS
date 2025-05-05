@@ -15,9 +15,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="/css/homepage.css">
 </head>
-
-<body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary nav-underline">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <img src="img/Screenshot_2025-05-03_222818-removebg-preview.png" alt="" style="width: 180px;">
@@ -59,7 +57,7 @@
                                 aria-expanded="false">
                                 <i class="fa-solid fa-circle-user" style="font-size: 30px;"></i>
                             </a>
-                            <ul class="dropdown-menu">
+                            <ul class="dropdown-menu dropdown-menu-end">
                                 <li><a class="dropdown-item" href="#">Action</a></li>
                                 <li><a class="dropdown-item" href="#">Another action</a></li>
                                 <li>
@@ -74,13 +72,47 @@
         </div>
     </nav>
 
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active position-relative">
+                <img src="/img/I've been to the peak of Bogor tourism (1).jpg" class="d-block w-100" style="height: 713px;" alt="...">
+                <div class="overlay"></div> <!-- Overlay gelap -->
+            </div>
+            <div class="carousel-item position-relative">
+                <img src="img/5 Kegiatan Mengasyikkan di Taman Safari Indonesia (1).jpg" class="d-block w-100" style="height: 713px;" alt="...">
+                <div class="overlay"></div>
+            </div>
+            <div class="carousel-item position-relative">
+                <img src="/img/upscalemedia-transformed.jpeg" class="d-block w-100" style="height: 713px;" alt="...">
+                <div class="overlay"></div>
+            </div>
+        </div>
+    </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" style="margin-top: 65px;" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+
+        <!-- Teks Tengah -->
+        <div class="carousel-caption-custom text-center text-light">
+            <h1 class="fw-bold">Temukan Pesona <br> Wisata Puncak</h1>
+            <p class="lead">Jelajahi keindahan alam dan budaya yang menakjubkan di Puncak, Bogor.</p>
+            <a href="#" class="btn btn-success btn-lg">Jelajahi Sekarang</a>
+        </div>
+
+    <div class="container">
+        <h1 class="about my-5 mx-5 text-center">About Us</h1>
+    </div>
+    
+
     <!-- Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js"
-        integrity="sha384-VQqxDN0EQCkWoxt/0vsQvZswzTHUVOImccYmSyhJTp7kGtPed0Qcx8rK9h9YEgx+"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js" integrity="sha384-VQqxDN0EQCkWoxt/0vsQvZswzTHUVOImccYmSyhJTp7kGtPed0Qcx8rK9h9YEgx+" crossorigin="anonymous"></script>
 </body>
 
 </html>

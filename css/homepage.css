@@ -2,3 +2,55 @@
 *{
     font-family: "Poppins", sans-serif;
 }
+.carousel-item {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6); 
+  z-index: 1;
+}
+
+.carousel-caption-custom {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2; 
+}
+
+.carousel-caption-custom::after{
+  content: "";
+  position: absolute;
+  bottom: -10px; 
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px; 
+  height: 4px; 
+  background-color: #A0C878; 
+  border-radius: 2px;
+}
+
+.about{
+  text-align: center;
+  position: relative;
+}
+
+.about::after{
+  position: absolute;
+  content: "";
+  bottom: -10px; 
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px; 
+  height: 4px; 
+  background-color: #A0C878; 
+  border-radius: 2px;
+}
+
+

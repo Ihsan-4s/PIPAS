@@ -66,7 +66,7 @@
             const storedUser = JSON.parse(localStorage.getItem('user'));
 
             if (storedUser && email === storedUser.email && password === storedUser.password) {
-                window.location.href = 'dashboard.html';
+                window.location.href = 'homepage.html';
             } else {
                 Swal.fire({
     icon: "error",
