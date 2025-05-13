@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+.carousel-item {
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.carousel-caption-custom {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.carousel-caption-custom::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 4px;
+    background-color: #A0C878;
+    border-radius: 2px;
+}
+
+.about {
+    text-align: center;
+    position: relative;
+}
+
+.about::after {
+    position: absolute;
+    content: "";
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 4px;
+    background-color: #A0C878;
+    border-radius: 2px;
+}
+
+.nav-tabs .nav-link.active {
+    border-color: transparent;
+    border-bottom: 3px solid #A0C878;
+    color: #A0C878;
+    font-weight: bold;
+}
+
+.highlight {
+    border-left: 4px solid #A0C878;
+    padding-left: 10px;
+}
+
+footer {
+    background-color: #1b1b1b;
+    color: white;
+    padding: 40px 20px;
+    /* padding-bottom: 0;
+    margin-bottom: 0; */
+}
+
+footer div {
+    max-width: 1200px;
+    margin: auto;
+}
+
+footer h3 {
+    margin-bottom: 15px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin-bottom: 10px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.Footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.Fcop {
+    text-align: center;
+
+}
+
+.Fsoc {
+    font-size: 30px;
+}
+
+.frontTitle{
+    background-image: url('../img/front-header.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 40px;
+    text-align: center;
+    color: white;
+}
+
+#book{
+    color: whitesmoke;
+}
+
+#book:hover{
+    color: white;
+    font-weight: bold;
+}
+
