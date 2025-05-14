@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- payment.html -->
+<body>
+  <div class="container">
+    <h2 id="namaWisata"></h2>
+    <img id="gambarWisata" style="max-width: 100%; height: auto;" />
+    <p>Harga Tiket: Rp<span id="hargaTiket"></span></p>
+
+    <!-- Form jadwal -->
+    <label for="tanggal">Pilih Tanggal Kunjungan:</label>
+    <input type="date" id="tanggal" name="tanggal" required />
+
+    <button class="btn btn-primary mt-3">Bayar</button>
+  </div>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const nama = urlParams.get('nama');
+    const gambar = urlParams.get('gambar');
+    const harga = urlParams.get('harga');
+
+    document.getElementById('namaWisata').textContent = nama;
+    document.getElementById('gambarWisata').src = 'img/' + gambar; // pastikan path benar
+    document.getElementById('hargaTiket').textContent = harga;
+  </script>
+</body>
+
+</html>
