@@ -115,7 +115,7 @@ footer a {
     font-size: 30px;
 }
 
-.frontTitle{
+.frontTitle {
     background-image: url('../img/front-header.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -125,24 +125,94 @@ footer a {
     color: white;
 }
 
-#book{
+#book {
     color: whitesmoke;
 }
 
-#book:hover{
+#book:hover {
     color: white;
     font-weight: bold;
 }
 
 
 .card-title {
-  font-weight: 700;
-  font-size: 1.2rem;
+    font-weight: 700;
+    font-size: 1.2rem;
 }
 
 .card-text {
-  color: #555;
-  font-weight: 300;
-  line-height: 1.6;
+    color: #555;
+    font-weight: 300;
+    line-height: 1.6;
 }
 
+.trending-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.slider-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider-viewport {
+    width: 760px;
+    overflow: hidden;
+    position: relative;
+}
+
+.activity-slider {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.activity-card {
+    width: 300px;
+    margin: 0 15px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    font-size: 1.2rem;
+    text-align: center;
+    flex-shrink: 0;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.4s ease;
+    pointer-events: none;
+}
+
+.activity-card.visible {
+    opacity: 1;
+}
+
+.activity-card.center {
+    transform: scale(1);
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 2;
+}
+
+.activity-card.side {
+    opacity: 0.4;
+    transform: scale(0.9);
+    z-index: 1;
+}
+
+.nav-button {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px;
+    user-select: none;
+}
